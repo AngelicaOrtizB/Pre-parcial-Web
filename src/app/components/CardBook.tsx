@@ -1,18 +1,13 @@
 "use client";
-
-import Image from "next/image";
 import { Book } from "../types/book";
 
-const BookCard = ({ id, name, description, publishingDate, image }: Book) => {
+const CardBook = ({ id, name, description, publishingDate, image }: Book) => {
   return (
     <div className="border rounded-lg shadow-lg overflow-hidden max-w-sm">
-      {/* Imagen del libro */}
       <img
         src={image}
-        alt={`Imagen del libro ${name}`}
-        width={400}
-        height={250}
-        className="w-full h-60 object-cover"
+        alt={` ${name}`}
+        className="w-full h-80 object-cover"
       />
       <div className="p-4">
         <h3 className="text-xl font-bold mb-2">{name}</h3>
@@ -25,4 +20,4 @@ const BookCard = ({ id, name, description, publishingDate, image }: Book) => {
   );
 };
 
-export default BookCard;
+export default CardBook;
