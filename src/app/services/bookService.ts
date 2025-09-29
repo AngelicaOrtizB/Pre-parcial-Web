@@ -6,9 +6,6 @@ export const fetchBooks = (): Promise<Book[]> => {
   
   return fetcher<Book[]>("/books");
 };
-export const createBook = (data: Book): Promise<Book> => {
-  return fetcher<Book>("/authors", {
-    method: "POST",
-    body: JSON.stringify(data), 
-  });
+export const fetchBookById = (id: number | string): Promise<Book> => {
+  return fetcher<Book>(`/books/${id}`);
 };

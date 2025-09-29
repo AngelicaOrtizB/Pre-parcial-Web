@@ -1,13 +1,24 @@
 "use client";
+
 import { Book } from "../types/book";
+import { useRouter } from "next/navigation";
 
 const CardBook = ({ id, name, description, publishingDate, image }: Book) => {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push(`/books/${id}`);
+  };
+
   return (
-    <div className="border rounded-lg shadow-lg overflow-hidden max-w-sm">
+    <div
+      onClick={handleClick}
+      className="border rounded-lg shadow-lg overflow-hidden max-w-sm cursor-pointer hover:shadow-xl transition"
+    >
       <img
         src={image}
-        alt={` ${name}`}
-        className="w-full h-80 object-cover"
+        alt={name}
+        className="w-full h-90 object-cover"
       />
       <div className="p-4">
         <h3 className="text-xl font-bold mb-2">{name}</h3>

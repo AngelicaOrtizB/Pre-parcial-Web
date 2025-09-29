@@ -3,9 +3,9 @@
 import React, { useEffect, useState } from "react";
 import { fetchBooks } from "../services/bookService";
 import { Book } from "../types/book";
-import BookCard from "../components/Card";
+import CardBook from "../components/CardBook";
 
-const BooksPage: React.FC = () => {
+export default function ListaBooks() {
   const [books, setBooks] = useState<Book[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -27,14 +27,11 @@ const BooksPage: React.FC = () => {
 
   return (
     <div className="p-6">
-      <h1 className="text-3xl font-bold mb-6 text-center">Todos los libros</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {books.map((book) => (
-          <BookCard key={book.id} {...book} />
+          <CardBook key={book.id} {...book} />
         ))}
       </div>
     </div>
   );
 };
-
-export default BooksPage;
