@@ -37,7 +37,7 @@ const Card = ({ id, name, birthDate, description, image, onDeleted }: CardProps)
         <div>
           <h3 className="text-xl font-bold mb-2">{name}</h3>
           <p className="text-gray-700 text-sm">{birthDate}</p>
-          <p className="text-gray-600 text-sm line-clamp-4">{description}</p>
+          <p className="text-gray-600 text-sm">{description}</p>
         </div>
 
         <div className="flex justify-center gap-4 mt-4">

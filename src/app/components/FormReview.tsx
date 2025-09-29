@@ -60,7 +60,7 @@ export default function ReviewForm({ onSubmit }: ReviewFormProps) {
       <button
         type="submit"
         disabled={submitting}
-        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50"
+        className="bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700 disabled:opacity-50"
       >
         {submitting ? "Enviando..." : "Agregar reseña"}
       </button>
