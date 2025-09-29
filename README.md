@@ -1,5 +1,8 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+### Para ejecutar Docker
+El back debe estar en la misma carpeta en donde esta esta por ejemplo downloads/bookstore-back y downloads/pre-parcial-web y se ejecuta desde este ultimo con **docker-compose up**
+
 ## Getting Started
 
 First, run the development server:
